@@ -1,6 +1,6 @@
 
 Show # $type->gold $tier->stack3
-	StackSize >= 3001
+	StackSize >= 200
 	BaseType == "Gold"
 	SetFontSize 40
 	SetTextColor 235 200 110 255
@@ -11,7 +11,7 @@ Show # $type->gold $tier->stack3
 	MinimapIcon 1 Yellow Cross
 
 Show # $type->gold $tier->stack2
-	StackSize >= 500
+	StackSize >= 100
 	BaseType == "Gold"
 	SetFontSize 35
 	SetTextColor 255 255 255 255
@@ -21,7 +21,7 @@ Show # $type->gold $tier->stack2
 	MinimapIcon 1 White Cross
 
 Show # $type->gold $tier->stack1
-	StackSize >= 75
+	StackSize >= 50
 	BaseType == "Gold"
 	SetFontSize 35
 	SetTextColor 255 255 255 150
@@ -30,7 +30,7 @@ Show # $type->gold $tier->stack1
 	MinimapIcon 2 Grey Cross
 
 Show # $type->gold $tier->stacklvl1
-	StackSize >= 50
+	StackSize >= 25
 	BaseType == "Gold"
 	AreaLevel <= 68
 	SetFontSize 18
@@ -113,7 +113,7 @@ Show # $type->uniques $tier->multispecial
 
 Show # $type->currency $tier->t1exalted
 	Class == "Stackable Currency"
-	BaseType == "Exalted Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra"
+	BaseType == "Exalted Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra" "Orb of Alchemy"
 	SetFontSize 40
 	SetTextColor 234 87 223 255
 	SetBorderColor 234 87 223 255
@@ -124,7 +124,7 @@ Show # $type->currency $tier->t1exalted
 
 Show # $type->currency $tier->t2divine
 	Class == "Stackable Currency"
-	BaseType == "Divine Orb" "Regal Orb"
+	BaseType == "Divine Orb" "Regal Orb" "Orb of Annulment"
 	SetFontSize 40
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
