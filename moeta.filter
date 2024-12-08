@@ -164,6 +164,14 @@ Show # %HS4 $type->currency $tier->t5alchemy
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 200 101 242 255
 
+Show # %D3 $type->currency->leveling $tier->wisdom
+	Class == "Stackable Currency"
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 30
+	SetTextColor 160 130 170
+	SetBorderColor 160 130 170
+	SetBackgroundColor 20 20 0 255
+
 
 Show # %HS4 $type->currency $tier->t5alchemy
 	Class == "Stackable Currency"
