@@ -1,0 +1,395 @@
+Show # $type->uncut->t1
+ItemLevel == 3
+BaseType == "Uncut Support Gem"
+SetFontSize 40
+SetTextColor 104 220 127 255
+SetBorderColor 104 220 127 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show # $type->uncut->t2
+BaseType == "Uncut Support Gem" "Uncut Spirit Gem"
+SetFontSize 40
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 104 220 127 255
+PlayAlertSound 1 300
+PlayEffect Red
+MinimapIcon 0 Red Triangle
+
+Show # $type->uncut->t3
+BaseType == "Uncut Skill Gem"
+SetFontSize 40
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 104 220 127 255
+PlayAlertSound 2 300
+PlayEffect Yellow
+MinimapIcon 1 Yellow Triangle
+
+Show # $type->cut
+	Class == "Skill Gems"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 175 230 186 255
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Triangle
+
+Show # $type->cut
+	Class == "Support Gems"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 175 230 186 255
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Triangle
+
+
+
+Show # $type->uniques $tier->multispecial
+	Rarity Unique
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 175 96 37 255
+	PlayAlertSound 2 300
+	PlayEffect Blue
+	MinimapIcon 1 Blue Star
+
+Show # $type->currency $tier->t1exalted
+	Class == "Stackable Currency"
+	BaseType == "Exalted Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra"
+	SetFontSize 40
+	SetTextColor 234 87 223 255
+	SetBorderColor 234 87 223 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+
+Show # $type->currency $tier->t2divine
+	Class == "Stackable Currency"
+	BaseType == "Divine Orb" "Regal Orb"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 0 Red Circle
+
+Show # $type->currency $tier->t3annul
+	Class == "Stackable Currency"
+	BaseType == "Vaal Orb"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+Show # $type->currency $tier->t4chaos
+	Class == "Stackable Currency"
+	BaseType == "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Artificer's Orb" "Regal Shard" "Chance Shard"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 200 101 242 255
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Circle
+
+
+Show # %HS4 $type->currency $tier->t5alchemy
+	Class == "Stackable Currency"
+	BaseType == "Orb of Transmutation" "Orb of Augmentation" "Artificer's Shard" "Transmutation Shard"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 200 101 242 255
+
+
+Show # %HS4 $type->currency $tier->t5alchemy
+	Class == "Stackable Currency"
+	SetFontSize 40
+	SetTextColor 255 0 255 255
+	SetBorderColor 255 0 255 255
+	SetBackgroundColor 100 0 100 255
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
+
+
+Show # $type->trial coins
+	Class == "Trial Coins"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+
+Show # $type->socketable
+	Class == "Socketable"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+
+Show # $type->questlikeItem
+	Class == "Quest Items"
+	SetFontSize 40
+	SetTextColor 74 230 58 255
+	SetBorderColor 74 230 58 255
+	SetBackgroundColor 20 20 0 255
+	PlayAlertSound 3 300
+	PlayEffect Green
+	MinimapIcon 0 Green Pentagon
+
+#------------------------------------
+#   [4702] Life flasks
+#------------------------------------
+
+Show # $type->leveling->flasks->life $tier->t1
+	Class == "Life Flasks"
+	BaseType "Lesser"
+	AreaLevel <= 9
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t2
+	Class == "Life Flasks"
+	BaseType "Medium"
+	AreaLevel <= 13
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t3
+	Class == "Life Flasks"
+	BaseType "Greater"
+	AreaLevel <= 17
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t4
+	Class == "Life Flasks"
+	BaseType "Grand"
+	AreaLevel <= 25
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t6
+	Class == "Life Flasks"
+	BaseType "Giant"
+	AreaLevel <= 31
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t7
+	Class == "Life Flasks"
+	BaseType "Colossal"
+	AreaLevel <= 37
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t8
+	Class == "Life Flasks"
+	BaseType "Gargantuan"
+	AreaLevel <= 43
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t9
+	Class == "Life Flasks"
+	BaseType "Transcendent"
+	AreaLevel <= 51
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t10
+	Class == "Life Flasks"
+	BaseType "Ultimate"
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+
+
+#------------------------------------
+#   [4703] Mana flasks
+#------------------------------------
+
+Show # $type->leveling->flasks->mana $tier->t1
+	Class == "Mana Flasks"
+	BaseType "Lesser"
+	AreaLevel <= 9
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t2
+	Class == "Mana Flasks"
+	BaseType "Medium"
+	AreaLevel <= 13
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t3
+	Class == "Mana Flasks"
+	BaseType "Greater"
+	AreaLevel <= 17
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t4
+	Class == "Mana Flasks"
+	BaseType "Grand"
+	AreaLevel <= 25
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t6
+	Class == "Mana Flasks"
+	BaseType "Giant"
+	AreaLevel <= 31
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t7
+	Class == "Mana Flasks"
+	BaseType "Colossal"
+	AreaLevel <= 37
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t8
+	Class == "Mana Flasks"
+	BaseType "Gargantuan"
+	AreaLevel <= 43
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t9
+	Class == "Mana Flasks"
+	BaseType "Transcendent"
+	AreaLevel <= 51
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t10
+	Class == "Mana Flasks"
+	BaseType "Ultimate"
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+
+Hide # $type->hidelayer $tier->outdatedlevelflaska
+	Quality 0
+	Class == "Life Flasks" "Mana Flasks"
+	BaseType "Greater" "Medium" "Lesser"
+	AreaLevel >= 15
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+Hide # $type->hidelayer $tier->outdatedlevelflaskb
+	Quality 0
+	Class == "Life Flasks" "Mana Flasks"
+	BaseType "Grand" "Giant"
+	AreaLevel >= 30
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+Hide # $type->hidelayer $tier->outdatedlevelflaskc
+	Quality 0
+	Class == "Life Flasks" "Mana Flasks"
+	BaseType "Colossal" "Gargantuan" "Transcendent"
+	AreaLevel >= 48
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+Show # %D4 $type->rare->any $tier->anytrinket
+	Rarity Normal Magic Rare
+	Class == "Amulets" "Belts" "Rings"
+	SetFontSize 40
+	SetTextColor 0 240 190 255
+	SetBorderColor 0 240 190 255
+	SetBackgroundColor 0 75 30 255
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 0 Blue Diamond
+
+
+Show  # $type->rarity
+Rarity Rare
+SetFontSize 45
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 20 110 220
+PlayAlertSound 3 300
+PlayEffect Yellow
+MinimapIcon 1 Yellow Diamond
+
+
+##TODO: Show good white bases
+
+    
+
+#Show # %HS3 $type->currency $tier->t6chrom
+#Class == "Stackable Currency"
+#BaseType == "Orb of Chance" "Regal Shard" "Orb of Binding"
+#SetFontSize 45
+#SetTextColor 0 0 0 255
+#SetBorderColor 0 0 0 255
+#SetBackgroundColor 172 160 188 255
