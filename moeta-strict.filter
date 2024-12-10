@@ -159,6 +159,33 @@ Show # %D3 $type->currency->leveling $tier->wisdom
 	SetBorderColor 160 130 170
 	SetBackgroundColor 20 20 0 255
 
+    
+
+# Special A Tier - League specific socketables and jewels
+Show 
+BaseType "Soul Core" "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+	
+# Special B Tier - Any Jewels
+Show
+Class "Jewel"
+Rarity Magic
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Moon
+PlayEffect Cyan Temp
+
+# Special B Tier - Any Runes and Charms
+Show 
+BaseType " Rune" " Charm"
+SetTextColor 0 240 190
+PlayEffect Cyan Temp
+
 
 Show # %HS4 $type->currency $tier->t5alchemy
 	Class == "Stackable Currency"
@@ -492,30 +519,6 @@ Show
 	PlayEffect White
 	MinimapIcon 1 White Square
 	SetFontSize 40
-
-# Special A Tier - League specific socketables and jewels
-Show 
-BaseType "Soul Core" "Timeless"
-SetTextColor 0 240 190
-SetBorderColor 0 240 190
-SetFontSize 40
-MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
-	
-# Special B Tier - Any Jewels
-Show
-Class "Jewel"
-Rarity Magic
-SetTextColor 0 240 190
-SetBorderColor 0 240 190
-SetFontSize 40
-PlayEffect Cyan Temp
-
-# Special B Tier - Any Runes and Charms
-Show 
-BaseType " Rune" " Charm"
-SetTextColor 0 240 190
-PlayEffect Cyan Temp
 
 
 ##TODO: Show good white bases
