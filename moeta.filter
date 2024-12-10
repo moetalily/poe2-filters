@@ -113,7 +113,7 @@ Show # $type->uniques $tier->multispecial
 
 Show # $type->currency $tier->t1exalted
 	Class == "Stackable Currency"
-	BaseType == "Exalted Orb" "Veiled Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra" "Orb of Alchemy" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring"
+	BaseType == "Exalted Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra" "Orb of Alchemy" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring"
 	SetFontSize 40
 	SetTextColor 234 87 223 255
 	SetBorderColor 234 87 223 255
@@ -531,6 +531,17 @@ Show # %D1 $type->normalcraft->t3
 	Rarity Normal Magic Rare
 	Class "Sceptres"
 	SetBorderColor 255 125 0 185
+
+Show # $type->artefact->sanctifiedrelics $tier->selectedrelics
+	Rarity Normal Magic Rare
+	Class == "Relics"
+	SetFontSize 40
+	SetTextColor 0 240 190 255
+	SetBorderColor 0 240 190 255
+	SetBackgroundColor 20 20 0 255
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 1 Blue Diamond
 
 
     
