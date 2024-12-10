@@ -46,19 +46,6 @@ Hide # $type->gold $tier->anyother
 	SetBorderColor 255 255 255 0
 	SetBackgroundColor 20 20 0 0
 
-
-
-Show # $type->uncut->t1
-ItemLevel == 3
-BaseType == "Uncut Support Gem"
-SetFontSize 40
-SetTextColor 104 220 127 255
-SetBorderColor 104 220 127 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
-
 Show # $type->uncut->t2
 BaseType == "Uncut Support Gem" "Uncut Spirit Gem"
 SetFontSize 40
