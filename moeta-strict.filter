@@ -450,7 +450,7 @@ Show # %H5 $type->tablets
 
 
 
-Show # %D1 $type->normalcraft->t3
+Show # %D1 $type->craftable->selectedweapon
 	Mirrored False
 	Corrupted False
 	ItemLevel >= 60
