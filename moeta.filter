@@ -113,7 +113,7 @@ Show # $type->uniques $tier->multispecial
 
 Show # $type->currency $tier->t1exalted
 	Class == "Stackable Currency"
-	BaseType == "Exalted Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra" "Orb of Alchemy" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring"
+	BaseType == "Exalted Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra" "Orb of Alchemy" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key"
 	SetFontSize 40
 	SetTextColor 234 87 223 255
 	SetBorderColor 234 87 223 255
@@ -135,7 +135,7 @@ Show # $type->currency $tier->t2divine
 
 Show # $type->currency $tier->t3annul
 	Class == "Stackable Currency"
-	BaseType == "Vaal Orb" "Lesser Jeweller's Orb" "Cartographer's Chisel"
+	BaseType == "Vaal Orb" "Lesser Jeweller's Orb" "Cartographer's Chisel" "Silver Key"
 	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -146,7 +146,7 @@ Show # $type->currency $tier->t3annul
 
 Show # $type->currency $tier->t4chaos
 	Class == "Stackable Currency"
-	BaseType == "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Artificer's Orb" "Regal Shard" "Chance Shard"
+	BaseType == "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Artificer's Orb" "Regal Shard" "Chance Shard" "Bronze Key"
 	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -218,17 +218,15 @@ Show # $type->questlikeItem
 
 
 
-
-Show # $type->currency->essence $tier->t1
-	Class == "Stackable Currency"
-	BaseType "Essence"
-	SetFontSize 40
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 234 87 223 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle
+Show
+Class "Currency"
+BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
 
 
 #------------------------------------
@@ -494,6 +492,15 @@ Show
 	PlayEffect White
 	MinimapIcon 1 White Square
 	SetFontSize 40
+
+# Special A Tier - League specific socketables and jewels
+Show 
+BaseType "Soul Core" "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
 	
 # Special B Tier - Any Jewels
 Show
