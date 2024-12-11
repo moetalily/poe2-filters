@@ -187,17 +187,6 @@ SetTextColor 0 240 190
 PlayEffect Cyan Temp
 
 
-Show # %HS4 $type->currency $tier->t5alchemy
-	Class == "Stackable Currency"
-	SetFontSize 40
-	SetTextColor 255 0 255 255
-	SetBorderColor 255 0 255 255
-	SetBackgroundColor 100 0 100 255
-	PlayAlertSound 3 300
-	PlayEffect Pink
-	MinimapIcon 0 Pink Circle
-
-
 Show # $type->trial coins
 	Class == "Trial Coins"
 	SetFontSize 40
@@ -233,14 +222,15 @@ Show # $type->questlikeItem
 
 
 Show
-Class "Currency"
-BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12
-PlayAlertSound 2 300
-PlayEffect White
-MinimapIcon 1 White Circle
+	Class "Currency"
+	BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
+	SetTextColor 255 207 132
+	SetBorderColor 255 207 132
+	SetBackgroundColor 76 51 12
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 1 White Circle
+
 
 
 #------------------------------------
@@ -586,3 +576,21 @@ Hide # $type->hidelayer $tier->normalmagicendgame
 	DisableDropSound True
 
 
+Show # %HS4 $type->anyremaining $tier->restex
+	Class == "Stackable Currency"
+	SetFontSize 40
+	SetTextColor 255 0 255 255
+	SetBorderColor 255 0 255 255
+	SetBackgroundColor 100 0 100 255
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
+
+Show # $type->anyremaining $tier->restex
+	SetFontSize 40
+	SetTextColor 255 0 255 255
+	SetBorderColor 255 0 255 255
+	SetBackgroundColor 100 0 100 255
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink UpsideDownHouse
