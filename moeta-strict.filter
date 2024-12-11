@@ -100,7 +100,7 @@ Show # $type->uniques $tier->multispecial
 
 Show # $type->currency $tier->t1exalted
 	Class == "Stackable Currency"
-	BaseType == "Exalted Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra" "Orb of Alchemy" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key"
+	BaseType == "Exalted Orb" "Chaos Orb" "Orb of Chance" "Mirror of Kalandra" "Divine Orb" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key" "Exotic Coinage"
 	SetFontSize 40
 	SetTextColor 234 87 223 255
 	SetBorderColor 234 87 223 255
@@ -111,7 +111,7 @@ Show # $type->currency $tier->t1exalted
 
 Show # $type->currency $tier->t2divine
 	Class == "Stackable Currency"
-	BaseType == "Divine Orb" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Orb of Binding"
+	BaseType == "Orb of Alchemy" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact"
 	SetFontSize 40
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
@@ -498,16 +498,16 @@ Show  # $type->rarity
 	PlayAlertSound 3 300
 	MinimapIcon 2 Yellow Diamond
 
-Show # %D3 $type->sockets
-	Sockets S
-	Rarity Normal Magic Rare
-	SetFontSize 20
-	SetTextColor 255 255 255 255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 25 124 103 255
-	PlayAlertSound 2 300
-	PlayEffect Grey
-	MinimapIcon 2 Grey Hexagon
+#Show # %D3 $type->sockets
+#	Sockets S
+#	Rarity Normal Magic Rare
+#	SetFontSize 20
+#	SetTextColor 255 255 255 255
+#	SetBorderColor 255 255 255 255
+#	SetBackgroundColor 25 124 103 255
+#	PlayAlertSound 2 300
+#	PlayEffect Grey
+#	MinimapIcon 2 Grey Hexagon
 	
 # Fragments
 Show
@@ -568,9 +568,17 @@ Show # $type->craft->Helm->t1
 	MinimapIcon 0 Blue Diamond
 
 
+Show # $type->craft->OffHand->t1
+	Rarity Normal Magic
+	BaseType == "Expert Plumed Focus" "Expert Stone Tower Shield" "Expert Feathered Targe" "Expert Omen Crest Shield" "Expert Edged Buckler"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBackgroundColor 20 20 0 255
+	MinimapIcon 0 Blue Diamond
+
 Hide # $type->hidelayer $tier->normalmagicendgame
 	Rarity Normal Magic
-	Class == "Amulets" "Quarterstaves" "Belts" "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rings" "Sceptres" "Shields" "Staves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands"
+	Class == "Amulets" "Quarterstaves" "Foci" "Crossbows" "Belts" "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rings" "Sceptres" "Shields" "Staves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands"
 	AreaLevel >= 60
 	SetFontSize 18
 	SetBorderColor 0 0 0 0
@@ -578,4 +586,3 @@ Hide # $type->hidelayer $tier->normalmagicendgame
 	DisableDropSound True
 
 
-	
