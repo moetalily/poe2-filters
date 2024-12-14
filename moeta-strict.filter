@@ -47,6 +47,17 @@ Hide # $type->gold $tier->anyother
 	SetBackgroundColor 20 20 0 0
 
 Show # $type->uncut->t2
+BaseType == "Uncut Skill Gem" "Uncut Spirit Gem"
+ItemLevel >= 19
+SetFontSize 40
+SetTextColor 104 220 127 255
+SetBorderColor 104 220 127 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show # $type->uncut->t2
 BaseType == "Uncut Support Gem" "Uncut Spirit Gem"
 SetFontSize 40
 SetTextColor 255 255 255 255
@@ -173,7 +184,7 @@ PlayEffect Cyan
 # Special B Tier - Any Jewels
 Show
 Class "Jewel"
-Rarity Magic
+Rarity Magic Rare
 SetTextColor 0 240 190
 SetBorderColor 0 240 190
 SetFontSize 40
@@ -405,7 +416,6 @@ MinimapIcon 0 Blue Kite
 
 
 Hide # $type->hidelayer $tier->outdatedlevelflaska
-	Quality 0
 	Class == "Life Flasks" "Mana Flasks"
 	BaseType "Greater" "Medium" "Lesser"
 	AreaLevel >= 15
@@ -415,7 +425,6 @@ Hide # $type->hidelayer $tier->outdatedlevelflaska
 	DisableDropSound True
 
 Hide # $type->hidelayer $tier->outdatedlevelflaskb
-	Quality 0
 	Class == "Life Flasks" "Mana Flasks"
 	BaseType "Grand" "Giant"
 	AreaLevel >= 30
@@ -425,7 +434,6 @@ Hide # $type->hidelayer $tier->outdatedlevelflaskb
 	DisableDropSound True
 
 Hide # $type->hidelayer $tier->outdatedlevelflaskc
-	Quality 0
 	Class == "Life Flasks" "Mana Flasks"
 	BaseType "Colossal" "Gargantuan" "Transcendent"
 	AreaLevel >= 48
@@ -434,17 +442,17 @@ Hide # $type->hidelayer $tier->outdatedlevelflaskc
 	SetBackgroundColor 20 20 0 0
 	DisableDropSound True
 
-Show # %D4 $type->rare->any $tier->anytrinket
+Show # $type->maps->hightier
+	WaystoneTier >= 15
 	Rarity Normal Magic Rare
-	Class == "Amulets" "Belts" "Rings"
+	Class == "Waystones"
 	SetFontSize 40
-	SetTextColor 0 240 190 255
-	SetBorderColor 0 240 190 255
-	SetBackgroundColor 0 75 30 255
-	PlayAlertSound 3 300
-	PlayEffect Blue
-	MinimapIcon 0 Blue Diamond
-
+	SetTextColor 100 0 122 255
+	SetBorderColor 100 0 122 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 0 Red Square
 
 Show # %H4 $type->waystones
 	Class == "Waystones"
@@ -480,13 +488,6 @@ Show # %D1 $type->craftable->selectedweapon
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 20 110 220
-
-Show  # $type->rarity
-	Rarity Rare
-	SetFontSize 30
-	SetBorderColor 255 125 0 185
-	PlayAlertSound 3 300
-	MinimapIcon 2 Yellow Diamond
 
 #Show # %D3 $type->sockets
 #	Sockets S
@@ -525,46 +526,133 @@ Show # $type->artefact->sanctifiedrelics $tier->selectedrelics
 	MinimapIcon 1 Blue Diamond
 
 
+Show # %D4 $type->rare->any $tier->anytrinket
+	Rarity Normal Magic Rare
+	Class == "Amulets" "Belts" "Rings"
+	SetFontSize 40
+	SetTextColor 0 240 190 255
+	SetBorderColor 0 240 190 255
+	SetBackgroundColor 0 75 30 255
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 0 Blue Diamond
+
+Show  # $type->rarity->Class
+	Rarity Rare
+	Class == "Staves" "Wands" "Sceptres" "Staves" "Fishing Rods" "Traps"
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+#Show  # $type->rarity->BaseType->Weapon
+#	Rarity Rare
+#	SetFontSize 40
+#	SetBorderColor 255 125 0 185
+#	PlayAlertSound 3 300
+#	Identified Tier
+#	MinimapIcon 2 Yellow Diamond
+
+
+Show  # $type->rarity->BaseType->Weapon
+	Rarity Rare
+	BaseType == "Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Striking Spear" "Helix Spear" "Abyssal Flail" "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Tense Crossbow"
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show  # $type->rarity->BaseType->Quiver
+	Rarity Rare
+	BaseType == "Visceral Quiver" "Volant Quiver" "Penetrating Quiver" "Primed Quiver" "Serrated Quiver" "Toxic Quiver" "Sacral Quiver"
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->gloves->t1
+	Rarity Rare
+	BaseType == "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->Boots->t1
+	Rarity Rare
+	BaseType == "Expert Stone Greaves" "Expert Lizardscale Boots" "Expert Feathered Sandals" "Expert Stacked Sabatons" "Expert Pelt Leggings" "Expert Hunting Shoes"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->Body->t1
+	Rarity Rare
+	BaseType == "Expert Vaal Cuirass" "Expert Serpentscale Coat" "Expert Altar Robe" "Expert Keth Raiment" "Expert Rogue Armour" "Expert Cloaked Mail" "Expert Scale Mail" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Scalper's Jacket" "Expert Wayfarer Jacket"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->Helm->t1
+	Rarity Rare
+	BaseType == "Golden Wreath" "Golden Visage" "Expert Elite Greathelm" "Expert Hunter Hood" "Expert Feathered Tiara" "Expert Shielded Helm" "Expert Heavy Crown" "Expert Tribal Mask"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->OffHand->t1
+	Rarity Rare
+	BaseType == "Expert Plumed Focus" "Expert Stone Tower Shield" "Expert Feathered Targe" "Expert Omen Crest Shield" "Expert Edged Buckler"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+
+
 Show # $type->craft->gloves->t1
 	Rarity Normal Magic
 	BaseType == "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
 	AreaLevel >= 60
-	SetFontSize 40
+	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
-	MinimapIcon 0 Blue Diamond
 
 Show # $type->craft->Boots->t1
 	Rarity Normal Magic
 	BaseType == "Expert Stone Greaves" "Expert Lizardscale Boots" "Expert Feathered Sandals" "Expert Stacked Sabatons" "Expert Pelt Leggings" "Expert Hunting Shoes"
 	AreaLevel >= 60
-	SetFontSize 40
+	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
-	MinimapIcon 0 Blue Diamond
 
 Show # $type->craft->Body->t1
 	Rarity Normal Magic
 	BaseType == "Expert Vaal Cuirass" "Expert Serpentscale Coat" "Expert Altar Robe" "Expert Keth Raiment" "Expert Rogue Armour" "Expert Cloaked Mail" "Expert Scale Mail" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Scalper's Jacket" "Expert Wayfarer Jacket"
 	AreaLevel >= 60
-	SetFontSize 40
+	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
-	MinimapIcon 0 Blue Diamond
 
 Show # $type->craft->Helm->t1
 	Rarity Normal Magic
 	BaseType == "Golden Wreath" "Golden Visage" "Expert Elite Greathelm" "Expert Hunter Hood" "Expert Feathered Tiara" "Expert Shielded Helm" "Expert Heavy Crown" "Expert Tribal Mask"
 	AreaLevel >= 60
-	SetFontSize 40
+	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
-	MinimapIcon 0 Blue Diamond
-
 
 Show # $type->craft->OffHand->t1
 	Rarity Normal Magic
 	BaseType == "Expert Plumed Focus" "Expert Stone Tower Shield" "Expert Feathered Targe" "Expert Omen Crest Shield" "Expert Edged Buckler"
 	AreaLevel >= 60
-	SetFontSize 40
+	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
-	MinimapIcon 0 Blue Diamond
+
+
 
 Hide # $type->hidelayer $tier->normalmagicendgame
 	Rarity Normal Magic
@@ -574,6 +662,17 @@ Hide # $type->hidelayer $tier->normalmagicendgame
 	SetBorderColor 0 0 0 0
 	SetBackgroundColor 20 20 0 0
 	DisableDropSound True
+
+Hide # $type->hidelayer $tier->raresendgame
+	ItemLevel >= 68
+	Rarity Rare
+	Class "Amulets" "Quarterstaves" "Foci" "Crossbows" "Belts" "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rings" "Sceptres" "Shields" "Staves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands"
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+
 
 
 Show # %HS4 $type->anyremaining $tier->restex
