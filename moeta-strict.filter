@@ -481,7 +481,7 @@ Show # %D1 $type->craftable->selectedweapon
 	ItemLevel >= 60
 	Rarity Normal Magic Rare
 	SetFontSize 40
-	Class "Sceptres"
+	BaseType == "Rattling Sceptre"
 	PlayAlertSound 3 300
 	PlayEffect Yellow
 	MinimapIcon 1 Blue Star
@@ -556,7 +556,7 @@ Show  # $type->rarity->Class
 
 Show  # $type->rarity->BaseType->Weapon
 	Rarity Rare
-	BaseType == "Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Striking Spear" "Helix Spear" "Abyssal Flail" "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Tense Crossbow"
+	BaseType == "Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Striking Spear" "Helix Spear" "Abyssal Flail" "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
 	SetFontSize 40
 	SetBorderColor 255 125 0 185
 	PlayAlertSound 3 300
@@ -619,7 +619,7 @@ Show # $type->rarity->BaseType->OffHand->t1
 
 Show # $type->craft->gloves->t1
 	Rarity Normal Magic
-	BaseType == "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
+	BaseType == "Expert Gothic Quarterstaff" "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
 	AreaLevel >= 60
 	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
