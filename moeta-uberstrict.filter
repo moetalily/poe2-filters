@@ -1,0 +1,726 @@
+
+Show # $type->gold $tier->stack3
+	StackSize >= 1000
+	BaseType == "Gold"
+	SetFontSize 40
+	SetTextColor 235 200 110 255
+	SetBorderColor 235 200 110 255
+	SetBackgroundColor 20 20 0 255
+	PlayAlertSound 2 300
+	PlayEffect Orange
+	MinimapIcon 1 Yellow Cross
+
+Show # $type->gold $tier->stack2
+	StackSize >= 250
+	BaseType == "Gold"
+	SetFontSize 35
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 20 20 0 255
+	PlayEffect Orange Temp
+	MinimapIcon 1 White Cross
+
+Show # $type->gold $tier->stack1
+	StackSize >= 100
+	BaseType == "Gold"
+	SetFontSize 35
+	SetTextColor 255 255 255 150
+	SetBorderColor 255 255 255 0
+	SetBackgroundColor 20 20 0 0
+	MinimapIcon 2 Grey Cross
+
+Show # $type->gold $tier->stacklvl1
+	StackSize >= 50
+	BaseType == "Gold"
+	AreaLevel <= 68
+	SetFontSize 18
+	SetTextColor 255 255 255 0
+	SetBorderColor 255 255 255 0
+	SetBackgroundColor 20 20 0 0
+	MinimapIcon 2 Grey Cross
+
+Hide # $type->gold $tier->anyother
+    BaseType == "Gold"
+    SetFontSize 10
+	SetTextColor 255 255 255 0
+	SetBorderColor 255 255 255 0
+	SetBackgroundColor 20 20 0 0
+
+Show # $type->uncut->t2
+	BaseType == "Uncut Skill Gem" "Uncut Spirit Gem"
+	ItemLevel >= 19
+	SetFontSize 40
+	SetTextColor 104 220 127 255
+	SetBorderColor 104 220 127 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+
+Show # $type->uncut->t2
+	ItemLevel <= 10
+	BaseType == "Uncut Spirit Gem"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 104 220 127 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 0 Red Triangle
+
+Show # $type->uncut->t3
+	ItemLevel <= 10
+	BaseType == "Uncut Support Gem" "Uncut Skill Gem"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 104 220 127 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Triangle
+
+
+Hide # $type->uncut->hide
+	BaseType == "Uncut Spirit Gem" "Uncut Support Gem" "Uncut Skill Gem"
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+
+Show # $type->cut
+	Class == "Skill Gems"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 175 230 186 255
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Triangle
+
+Show # $type->cut
+	Class == "Support Gems"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 175 230 186 255
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Triangle
+
+
+
+Show # $type->uniques $tier->multispecial
+	Rarity Unique
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 175 96 37 255
+	PlayAlertSound 2 300
+	PlayEffect Blue
+	MinimapIcon 1 Blue Star
+
+Show # $type->currency $tier->t1exalted
+	Class == "Stackable Currency"
+	BaseType == "Exalted Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Chance" "Mirror of Kalandra" "Divine Orb" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key" "Exotic Coinage"
+	SetFontSize 40
+	SetTextColor 234 87 223 255
+	SetBorderColor 234 87 223 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+
+Show # $type->currency $tier->t2divine
+	Class == "Stackable Currency"
+	BaseType == "Orb of Alchemy" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 0 Red Circle
+
+Show # $type->currency $tier->t3annul
+	Class == "Stackable Currency"
+	BaseType == "Vaal Orb" "Lesser Jeweller's Orb" "Cartographer's Chisel" "Silver Key" "GlassBlower's Bauble"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+Show # $type->currency $tier->t3annul
+	Class == "Stackable Currency"
+	BaseType " Splinter"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+Show # $type->currency $tier->t4chaos
+	Class == "Stackable Currency"
+	BaseType == "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Artificer's Orb" "Regal Shard" "Chance Shard" "Bronze Key"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 200 101 242 255
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Circle
+
+
+Show # %HS4 $type->currency $tier->t5alchemy
+	Class == "Stackable Currency"
+	BaseType == "Orb of Transmutation" "Orb of Augmentation" "Artificer's Shard" "Transmutation Shard"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 200 101 242 255
+
+Hide # %D3 $type->currency->leveling $tier->wisdom
+	Class == "Stackable Currency"
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 30
+	SetTextColor 160 130 170
+	SetBorderColor 160 130 170
+	SetBackgroundColor 20 20 0 255
+
+    
+
+# Special A Tier - League specific socketables and jewels
+Show 
+BaseType "Soul Core" "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+	
+# Special B Tier - Any Jewels
+Show
+Class "Jewel"
+Rarity Magic Rare
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Moon
+PlayEffect Cyan Temp
+
+# Special B Tier - Any Runes and Charms
+Show 
+BaseType " Rune" " Charm"
+SetTextColor 0 240 190
+PlayEffect Cyan Temp
+
+
+Show # $type->trial coins
+	Class == "Trial Coins"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+
+Show # $type->socketable
+	Class == "Socketable"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+
+Show # $type->questlikeItem
+	Class == "Quest Items"
+	SetFontSize 40
+	SetTextColor 74 230 58 255
+	SetBorderColor 74 230 58 255
+	SetBackgroundColor 20 20 0 255
+	PlayAlertSound 3 300
+	PlayEffect Green
+	MinimapIcon 0 Green Pentagon
+
+
+
+Show
+	Class "Currency"
+	BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
+	SetTextColor 255 207 132
+	SetBorderColor 255 207 132
+	SetBackgroundColor 76 51 12
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 1 White Circle
+
+
+
+#------------------------------------
+#   [4702] Life flasks
+#------------------------------------
+
+Show # $type->leveling->flasks->life $tier->t1
+	Class == "Life Flasks"
+	BaseType "Lesser"
+	AreaLevel <= 9
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t2
+	Class == "Life Flasks"
+	BaseType "Medium"
+	AreaLevel <= 13
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t3
+	Class == "Life Flasks"
+	BaseType "Greater"
+	AreaLevel <= 17
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t4
+	Class == "Life Flasks"
+	BaseType "Grand"
+	AreaLevel <= 25
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t6
+	Class == "Life Flasks"
+	BaseType "Giant"
+	AreaLevel <= 31
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t7
+	Class == "Life Flasks"
+	BaseType "Colossal"
+	AreaLevel <= 37
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t8
+	Class == "Life Flasks"
+	BaseType "Gargantuan"
+	AreaLevel <= 43
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t9
+	Class == "Life Flasks"
+	BaseType "Transcendent"
+	AreaLevel <= 51
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+Show # $type->leveling->flasks->life $tier->t10
+	Class == "Life Flasks"
+	BaseType "Ultimate"
+	SetFontSize 30
+	SetBorderColor 120 0 0
+SetTextColor 255 0 0 255
+MinimapIcon 0 Red Kite
+
+
+
+#------------------------------------
+#   [4703] Mana flasks
+#------------------------------------
+
+Show # $type->leveling->flasks->mana $tier->t1
+	Class == "Mana Flasks"
+	BaseType "Lesser"
+	AreaLevel <= 9
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t2
+	Class == "Mana Flasks"
+	BaseType "Medium"
+	AreaLevel <= 13
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t3
+	Class == "Mana Flasks"
+	BaseType "Greater"
+	AreaLevel <= 17
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t4
+	Class == "Mana Flasks"
+	BaseType "Grand"
+	AreaLevel <= 25
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t6
+	Class == "Mana Flasks"
+	BaseType "Giant"
+	AreaLevel <= 31
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t7
+	Class == "Mana Flasks"
+	BaseType "Colossal"
+	AreaLevel <= 37
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t8
+	Class == "Mana Flasks"
+	BaseType "Gargantuan"
+	AreaLevel <= 43
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t9
+	Class == "Mana Flasks"
+	BaseType "Transcendent"
+	AreaLevel <= 51
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+Show # $type->leveling->flasks->mana $tier->t10
+	Class == "Mana Flasks"
+	BaseType "Ultimate"
+	SetFontSize 30
+	SetBorderColor 0 0 120
+SetTextColor 0 0 255 255
+MinimapIcon 0 Blue Kite
+
+
+Hide # $type->hidelayer $tier->outdatedlevelflaska
+	Class == "Life Flasks" "Mana Flasks"
+	BaseType "Greater" "Medium" "Lesser"
+	AreaLevel >= 15
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+Hide # $type->hidelayer $tier->outdatedlevelflaskb
+	Class == "Life Flasks" "Mana Flasks"
+	BaseType "Grand" "Giant"
+	AreaLevel >= 30
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+Hide # $type->hidelayer $tier->outdatedlevelflaskc
+	Class == "Life Flasks" "Mana Flasks"
+	BaseType "Colossal" "Gargantuan" "Transcendent"
+	AreaLevel >= 48
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+Show # $type->maps->hightier
+	WaystoneTier >= 15
+	Rarity Normal Magic Rare
+	Class == "Waystones"
+	SetFontSize 40
+	SetTextColor 100 0 122 255
+	SetBorderColor 100 0 122 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 0 Red Square
+
+Show # %H4 $type->waystones
+	Class == "Waystones"
+	WaystoneTier > 10
+	SetFontSize 45
+	SetTextColor 255 255 255 255
+	SetBackgroundColor 20 20 0 255
+	PlayAlertSound 4 300
+	PlayEffect White
+	MinimapIcon 1 Yellow Square
+
+Hide # %H4 $type->waystones->lowtier
+	Class == "Waystones"
+	WaystoneTier <= 10
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+Show # %H5 $type->tablets
+	Class == "Tablet"
+	SetFontSize 40
+	SetTextColor 145 30 220 255
+	SetBorderColor 145 30 220 255
+	SetBackgroundColor 200 200 200 255
+	PlayAlertSound 5 300
+	PlayEffect Purple
+	MinimapIcon 1 Purple Square
+
+
+
+Show # %D1 $type->craftable->selectedweapon
+	Mirrored False
+	Corrupted False
+	ItemLevel >= 60
+	Rarity Normal Magic Rare
+	SetFontSize 40
+	BaseType == "Rattling Sceptre"
+	PlayAlertSound 3 300
+	PlayEffect Yellow
+	MinimapIcon 1 Blue Star
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 20 110 220
+
+#Show # %D3 $type->sockets
+#	Sockets S
+#	Rarity Normal Magic Rare
+#	SetFontSize 20
+#	SetTextColor 255 255 255 255
+#	SetBorderColor 255 255 255 255
+#	SetBackgroundColor 25 124 103 255
+#	PlayAlertSound 2 300
+#	PlayEffect Grey
+#	MinimapIcon 2 Grey Hexagon
+	
+# Fragments
+Show
+	BaseType "Simulacrum" " Tablet" "Breachstone" "Logbook" "Barya" "Ultimatum" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+	SetTextColor 255 207 255
+	SetBorderColor 255 207 255
+	SetBackgroundColor 65 20 80
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 1 White Square
+	SetFontSize 40
+
+
+##TODO: Show good white bases
+
+Show # $type->artefact->sanctifiedrelics $tier->selectedrelics
+	Rarity Normal Magic Rare
+	Class == "Relics"
+	SetFontSize 40
+	SetTextColor 0 240 190 255
+	SetBorderColor 0 240 190 255
+	SetBackgroundColor 20 20 0 255
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 1 Blue Diamond
+
+
+Show # %D4 $type->rare->any $tier->anytrinket
+	Rarity Normal Magic Rare
+	Class == "Amulets" "Belts" "Rings"
+	SetFontSize 40
+	SetTextColor 0 240 190 255
+	SetBorderColor 0 240 190 255
+	SetBackgroundColor 0 75 30 255
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 0 Blue Diamond
+
+Show  # $type->rarity->Class
+	Rarity Rare
+	Class == "Staves" "Wands" "Sceptres" "Staves" "Fishing Rods" "Traps"
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+#Show  # $type->rarity->BaseType->Weapon
+#	Rarity Rare
+#	SetFontSize 40
+#	SetBorderColor 255 125 0 185
+#	PlayAlertSound 3 300
+#	Identified Tier
+#	MinimapIcon 2 Yellow Diamond
+
+
+Show  # $type->rarity->BaseType->Weapon
+	Rarity Rare
+	BaseType == "Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Striking Spear" "Helix Spear" "Abyssal Flail" "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show  # $type->rarity->BaseType->Quiver
+	Rarity Rare
+	BaseType == "Visceral Quiver" "Volant Quiver" "Penetrating Quiver" "Primed Quiver" "Serrated Quiver" "Toxic Quiver" "Sacral Quiver"
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->gloves->t1
+	Rarity Rare
+	BaseType == "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->Boots->t1
+	Rarity Rare
+	BaseType == "Expert Stone Greaves" "Expert Lizardscale Boots" "Expert Feathered Sandals" "Expert Stacked Sabatons" "Expert Pelt Leggings" "Expert Hunting Shoes"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->Body->t1
+	Rarity Rare
+	BaseType == "Expert Vaal Cuirass" "Expert Serpentscale Coat" "Expert Altar Robe" "Expert Keth Raiment" "Expert Rogue Armour" "Expert Cloaked Mail" "Expert Scale Mail" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Scalper's Jacket" "Expert Wayfarer Jacket"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->Helm->t1
+	Rarity Rare
+	BaseType == "Golden Wreath" "Golden Visage" "Expert Elite Greathelm" "Expert Hunter Hood" "Expert Feathered Tiara" "Expert Shielded Helm" "Expert Heavy Crown" "Expert Tribal Mask"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+Show # $type->rarity->BaseType->OffHand->t1
+	Rarity Rare
+	BaseType == "Expert Plumed Focus" "Expert Stone Tower Shield" "Expert Feathered Targe" "Expert Omen Crest Shield" "Expert Edged Buckler"
+	AreaLevel >= 60
+	SetFontSize 40
+	SetBorderColor 255 125 0 185
+	PlayAlertSound 3 300
+	MinimapIcon 2 Yellow Diamond
+
+
+
+Show # $type->craft->gloves->t1
+	Rarity Normal Magic
+	BaseType == "Expert Gothic Quarterstaff" "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
+	AreaLevel >= 60
+	SetFontSize 30
+	SetBackgroundColor 20 20 0 255
+
+Show # $type->craft->Boots->t1
+	Rarity Normal Magic
+	BaseType == "Expert Stone Greaves" "Expert Lizardscale Boots" "Expert Feathered Sandals" "Expert Stacked Sabatons" "Expert Pelt Leggings" "Expert Hunting Shoes"
+	AreaLevel >= 60
+	SetFontSize 30
+	SetBackgroundColor 20 20 0 255
+
+Show # $type->craft->Body->t1
+	Rarity Normal Magic
+	BaseType == "Expert Vaal Cuirass" "Expert Serpentscale Coat" "Expert Altar Robe" "Expert Keth Raiment" "Expert Rogue Armour" "Expert Cloaked Mail" "Expert Scale Mail" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Scalper's Jacket" "Expert Wayfarer Jacket"
+	AreaLevel >= 60
+	SetFontSize 30
+	SetBackgroundColor 20 20 0 255
+
+Show # $type->craft->Helm->t1
+	Rarity Normal Magic
+	BaseType == "Golden Wreath" "Golden Visage" "Expert Elite Greathelm" "Expert Hunter Hood" "Expert Feathered Tiara" "Expert Shielded Helm" "Expert Heavy Crown" "Expert Tribal Mask"
+	AreaLevel >= 60
+	SetFontSize 30
+	SetBackgroundColor 20 20 0 255
+
+Show # $type->craft->OffHand->t1
+	Rarity Normal Magic
+	BaseType == "Expert Plumed Focus" "Expert Stone Tower Shield" "Expert Feathered Targe" "Expert Omen Crest Shield" "Expert Edged Buckler"
+	AreaLevel >= 60
+	SetFontSize 30
+	SetBackgroundColor 20 20 0 255
+
+
+
+Hide # $type->hidelayer $tier->normalmagicendgame
+	Rarity Normal Magic
+	Class == "Amulets" "Quarterstaves" "Foci" "Crossbows" "Belts" "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rings" "Sceptres" "Shields" "Staves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands"
+	AreaLevel >= 60
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+Hide # $type->hidelayer $tier->raresendgame
+	ItemLevel >= 68
+	Rarity Rare
+	Class "Amulets" "Quarterstaves" "Foci" "Crossbows" "Belts" "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rings" "Sceptres" "Shields" "Staves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands"
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
+
+
+
+Show # %HS4 $type->anyremaining $tier->restex
+	Class == "Stackable Currency"
+	SetFontSize 40
+	SetTextColor 255 0 255 255
+	SetBorderColor 255 0 255 255
+	SetBackgroundColor 100 0 100 255
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
+
+Show # $type->anyremaining $tier->restex
+	SetFontSize 40
+	SetTextColor 255 0 255 255
+	SetBorderColor 255 0 255 255
+	SetBackgroundColor 100 0 100 255
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink UpsideDownHouse
