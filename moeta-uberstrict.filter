@@ -54,8 +54,8 @@ Show # $type->uncut->t2
 	SetBorderColor 104 220 127 255
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 6 300
-	PlayEffect Red
-	MinimapIcon 0 Red Star
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Triangle
 
 Show # $type->uncut->t2
 	ItemLevel <= 10
@@ -108,6 +108,48 @@ Show # $type->cut
 	PlayEffect White
 	MinimapIcon 2 White Triangle
 
+
+#------------------------------------
+#   [4202] Tier 1 and 2 uniques
+#------------------------------------
+# !! Waypoint c10.uniques.t1 : "Tierlist - Uniques - T1, T2"
+
+Show # $type->uniques $tier->t1
+	Rarity Unique
+	BaseType == "Smuggler Coat" "Heavy Belt" "Diamond" "Furtive Wraps" "Timeless Jewel" "Time-Lost Diamond"
+	SetFontSize 40
+	SetTextColor 175 37 37 255
+	SetBorderColor 175 96 37 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+
+Show # $type->uniques $tier->t2
+	Rarity Unique
+	BaseType == "Ruby" "Sapphire" "Emerald"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 175 37 37 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 0 Yellow Star
+
+	#------------------------------------
+#   [4204] Multi-Unique bases.
+#------------------------------------
+
+Show # $type->uniques $tier->multispecialhigh
+	Rarity Unique
+	BaseType == "Stellar Amulet" "Solar Amulet" "Jade Amulet"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 175 96 37 255
+	PlayAlertSound 2 300
+	PlayEffect Blue
+	MinimapIcon 1 Blue Star
 
 
 Show # $type->uniques $tier->multispecial
@@ -192,6 +234,71 @@ Hide # %D3 $type->currency->leveling $tier->wisdom
 	SetBorderColor 160 130 170
 	SetBackgroundColor 20 20 0 255
 
+
+#------------------------------------
+#   [3705] Deli - Distilled
+#------------------------------------
+
+
+Show # $type->currency->oil $tier->t1
+	Class == "Stackable Currency"
+	BaseType == "Distilled Isolation"
+	SetFontSize 40
+	SetTextColor 234 87 223 255
+	SetBorderColor 234 87 223 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+
+Show # $type->currency->oil $tier->t2
+	Class == "Stackable Currency"
+	BaseType == "Distilled Suffering" "Distilled Fear"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 0 Red Circle
+
+Show # %HS5 $type->currency->oil $tier->t3
+	Class == "Stackable Currency"
+	BaseType == "Distilled Envy" "Distilled Disgust" "Distilled Despair"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+Show # %HS4 $type->currency->oil $tier->t4
+	Class == "Stackable Currency"
+	BaseType == "Distilled Ire" "Distilled Guilt" "Distilled Greed" "Distilled Paranoia"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 200 101 242 255
+
+#Show # %HS3 $type->currency->oil $tier->t5
+#	Class == "Stackable Currency"
+#	BaseType == 
+#	SetFontSize 40
+#	SetTextColor 0 0 0 255
+#	SetBorderColor 0 0 0 255
+#	SetBackgroundColor 172 160 188 255
+
+Show # $type->currency->oil $tier->restex
+	Class == "Stackable Currency"
+	BaseType "Distilled"
+	SetFontSize 40
+	SetTextColor 255 0 255 255
+	SetBorderColor 255 0 255 255
+	SetBackgroundColor 100 0 100 255
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
     
 
 # Special A Tier - League specific socketables and jewels
@@ -253,6 +360,16 @@ Show # $type->questlikeItem
 	MinimapIcon 0 Green Pentagon
 
 
+Show
+	Class "Currency"
+	BaseType "Greater Essence of"
+	SetFontSize 40
+	SetTextColor 234 87 223 255
+	SetBorderColor 234 87 223 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect White
+	MinimapIcon 1 White Circle
 
 Show
 	Class "Currency"
@@ -345,6 +462,7 @@ MinimapIcon 0 Red Kite
 Show # $type->leveling->flasks->life $tier->t10
 	Class == "Life Flasks"
 	BaseType "Ultimate"
+	AreaLevel <= 68
 	SetFontSize 30
 	SetBorderColor 120 0 0
 SetTextColor 255 0 0 255
@@ -431,6 +549,7 @@ MinimapIcon 0 Blue Kite
 Show # $type->leveling->flasks->mana $tier->t10
 	Class == "Mana Flasks"
 	BaseType "Ultimate"
+	AreaLevel <= 68
 	SetFontSize 30
 	SetBorderColor 0 0 120
 SetTextColor 0 0 255 255
@@ -587,7 +706,7 @@ Show  # $type->rarity->Class
 
 Show  # $type->rarity->BaseType->Weapon
 	Rarity Rare
-	BaseType == "Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Striking Spear" "Helix Spear" "Abyssal Flail" "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
+	BaseType == "Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Striking Spear" "Helix Spear" "Abyssal Flail" "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Gothic Quarterstaff" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
 	SetFontSize 40
 	SetBorderColor 255 125 0 185
 	PlayAlertSound 3 300
@@ -650,7 +769,7 @@ Show # $type->rarity->BaseType->OffHand->t1
 
 Show # $type->craft->gloves->t1
 	Rarity Normal Magic
-	BaseType == "Expert Gothic Quarterstaff" "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
+	BaseType == "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
 	AreaLevel >= 60
 	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
