@@ -583,6 +583,15 @@ Hide # $type->hidelayer $tier->outdatedlevelflaskc
 	SetBackgroundColor 20 20 0 0
 	DisableDropSound True
 
+Hide # $type->hidelayer $tier->outdatedlevelflaskc
+	Class == "Life Flasks" "Mana Flasks"
+	BaseType "Ultimate"
+	AreaLevel >= 68
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+
 Show # $type->maps->hightier
 	WaystoneTier >= 15
 	Rarity Normal Magic Rare
