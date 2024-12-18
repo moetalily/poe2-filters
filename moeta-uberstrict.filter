@@ -58,7 +58,6 @@ Show # $type->uncut->t2
 	MinimapIcon 1 Yellow Triangle
 
 Show # $type->uncut->t2
-	ItemLevel <= 10
 	BaseType == "Uncut Spirit Gem"
 	SetFontSize 40
 	SetTextColor 255 255 255 255
@@ -81,7 +80,7 @@ Show # $type->uncut->t3
 
 
 Hide # $type->uncut->hide
-	BaseType == "Uncut Spirit Gem" "Uncut Support Gem" "Uncut Skill Gem"
+	BaseType == "Uncut Support Gem" "Uncut Skill Gem"
 	SetFontSize 18
 	SetBorderColor 0 0 0 0
 	SetBackgroundColor 20 20 0 0
@@ -164,7 +163,7 @@ Show # $type->uniques $tier->multispecial
 
 Show # $type->currency $tier->t1exalted
 	Class == "Stackable Currency"
-	BaseType == "Exalted Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Chance" "Mirror of Kalandra" "Divine Orb" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key" "Exotic Coinage"
+	BaseType == "Orb of Chance" "Mirror of Kalandra" "Divine Orb" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key" "Exotic Coinage" "Carapace Catalyst" "Flesh Catalyst" "Uul-Netol's Catalyst" "Skittering Catalyst"
 	SetFontSize 40
 	SetTextColor 234 87 223 255
 	SetBorderColor 234 87 223 255
@@ -175,7 +174,7 @@ Show # $type->currency $tier->t1exalted
 
 Show # $type->currency $tier->t2divine
 	Class == "Stackable Currency"
-	BaseType == "Orb of Alchemy" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact"
+	BaseType == "Exalted Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Alchemy" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact" "Flesh Catalyst" "Adaptive Catalyst" "Xoph's Catalyst" "Esh's Catalyst" "Tul's Catalyst" "Reaver Catalyst" "Sibilant Catalyst" "Chayula's Catalyst" 
 	SetFontSize 40
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
@@ -208,7 +207,7 @@ Show # $type->currency $tier->t3annul
 
 Show # $type->currency $tier->t4chaos
 	Class == "Stackable Currency"
-	BaseType == "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Artificer's Orb" "Regal Shard" "Chance Shard" "Bronze Key"
+	BaseType == "Arcanist's Etcher" "Neural Catalyst" "Armourer's Scrap" "Blacksmith's Whetstone" "Artificer's Orb" "Regal Shard" "Chance Shard" "Bronze Key"
 	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -364,23 +363,54 @@ Show
 	Class "Currency"
 	BaseType "Greater Essence of"
 	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+	
+Show
+	Class "Currency"
+	BaseType "Essence of"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 200 101 242 255
+
+Show # $type->currency->trial->omen $tier->t1
+	Class == "Stackable Currency"
+	BaseType == "Omen of Whittling" "Omen of Sinistral Erasure" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Dextral Annulment"
+	SetFontSize 40
 	SetTextColor 234 87 223 255
 	SetBorderColor 234 87 223 255
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 6 300
-	PlayEffect White
-	MinimapIcon 1 White Circle
+	PlayEffect Red
+	MinimapIcon 0 Red Star
 
-Show
-	Class "Currency"
-	BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
-	SetTextColor 255 207 132
-	SetBorderColor 255 207 132
-	SetBackgroundColor 76 51 12
+Show # $type->currency->trial->omen $tier->t2
+	Class == "Stackable Currency"
+	BaseType == "Omen of Resurgence" "Omen of Corruption" "Omen of Amelioration"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 0 Red Circle
+
+Show # $type->currency->trial->omen $tier->t3
+	Class == "Stackable Currency"
+	BaseType == "Omen of Sinistral Alchemy" "Omen of Dextral Alchemy" "Omen of Sinistral Coronation" "Omen of Dextral Coronation" "Omen of Refreshment" "Omen of Sinistral Exaltation" "Omen of Dextral Exaltation" "Omen of Greater Annulment" "Omen of Greater Exaltation"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
 	PlayAlertSound 2 300
-	PlayEffect White
-	MinimapIcon 1 White Circle
-
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
 
 
 #------------------------------------
@@ -638,15 +668,17 @@ Show # %D1 $type->craftable->selectedweapon
 	Mirrored False
 	Corrupted False
 	ItemLevel >= 60
-	Rarity Normal Magic Rare
+	Rarity Rare
 	SetFontSize 40
-	BaseType == "Rattling Sceptre"
+	Class == "Crossbows"
+	BaseType == "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
 	PlayAlertSound 3 300
 	PlayEffect Yellow
 	MinimapIcon 1 Blue Star
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 20 110 220
+
 
 #Show # %D3 $type->sockets
 #	Sockets S
