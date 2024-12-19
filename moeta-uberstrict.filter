@@ -163,7 +163,7 @@ Show # $type->uniques $tier->multispecial
 
 Show # $type->currency $tier->t1exalted
 	Class == "Stackable Currency"
-	BaseType == "Orb of Chance" "Mirror of Kalandra" "Divine Orb" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key" "Exotic Coinage" "Carapace Catalyst" "Flesh Catalyst" "Uul-Netol's Catalyst" "Skittering Catalyst"
+	BaseType == "Orb of Chance" "Mirror of Kalandra" "Divine Orb" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key" "Carapace Catalyst" "Flesh Catalyst" "Uul-Netol's Catalyst" "Skittering Catalyst"
 	SetFontSize 40
 	SetTextColor 234 87 223 255
 	SetBorderColor 234 87 223 255
@@ -174,7 +174,7 @@ Show # $type->currency $tier->t1exalted
 
 Show # $type->currency $tier->t2divine
 	Class == "Stackable Currency"
-	BaseType == "Exalted Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Alchemy" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact" "Flesh Catalyst" "Adaptive Catalyst" "Xoph's Catalyst" "Esh's Catalyst" "Tul's Catalyst" "Reaver Catalyst" "Sibilant Catalyst" "Chayula's Catalyst" 
+	BaseType == "Exotic Coinage" "Exalted Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Alchemy" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Flesh Catalyst" "Adaptive Catalyst" "Xoph's Catalyst" "Esh's Catalyst" "Tul's Catalyst" "Reaver Catalyst" "Sibilant Catalyst" "Chayula's Catalyst" 
 	SetFontSize 40
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
@@ -185,7 +185,7 @@ Show # $type->currency $tier->t2divine
 
 Show # $type->currency $tier->t3annul
 	Class == "Stackable Currency"
-	BaseType == "Vaal Orb" "Lesser Jeweller's Orb" "Cartographer's Chisel" "Silver Key" "GlassBlower's Bauble"
+	BaseType == "Vaal Orb" "Lesser Jeweller's Orb" "Cartographer's Chisel" "Silver Key" "GlassBlower's Bauble" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact"
 	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
