@@ -163,7 +163,7 @@ Show # $type->uniques $tier->multispecial
 
 Show # $type->currency $tier->t1exalted
 	Class == "Stackable Currency"
-	BaseType == "Orb of Chance" "Mirror of Kalandra" "Divine Orb" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key" "Carapace Catalyst" "Flesh Catalyst" "Uul-Netol's Catalyst" "Skittering Catalyst"
+	BaseType == "Orb of Chance" "Mirror of Kalandra" "Divine Orb" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Sacred Orb" "Orb of Scouring" "Gold Key"
 	SetFontSize 40
 	SetTextColor 234 87 223 255
 	SetBorderColor 234 87 223 255
@@ -174,7 +174,7 @@ Show # $type->currency $tier->t1exalted
 
 Show # $type->currency $tier->t2divine
 	Class == "Stackable Currency"
-	BaseType == "Exotic Coinage" "Exalted Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Alchemy" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Flesh Catalyst" "Adaptive Catalyst" "Xoph's Catalyst" "Esh's Catalyst" "Tul's Catalyst" "Reaver Catalyst" "Sibilant Catalyst" "Chayula's Catalyst" 
+	BaseType == "Exotic Coinage" "Exalted Orb" "Chaos Orb" "Gemcutter's Prism" "Orb of Alchemy" "Regal Orb" "Orb of Annulment" "Blessed Orb" "Chromatic Orb" "Adaptive Catalyst" "Xoph's Catalyst" "Esh's Catalyst" "Tul's Catalyst" "Reaver Catalyst" "Sibilant Catalyst" "Chayula's Catalyst" 
 	SetFontSize 40
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
@@ -185,7 +185,7 @@ Show # $type->currency $tier->t2divine
 
 Show # $type->currency $tier->t3annul
 	Class == "Stackable Currency"
-	BaseType == "Vaal Orb" "Lesser Jeweller's Orb" "Cartographer's Chisel" "Silver Key" "GlassBlower's Bauble" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact"
+	BaseType == "Vaal Orb" "Lesser Jeweller's Orb" "Neural Catalyst" "Cartographer's Chisel" "Silver Key" "GlassBlower's Bauble" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact"
 	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -207,7 +207,7 @@ Show # $type->currency $tier->t3annul
 
 Show # $type->currency $tier->t4chaos
 	Class == "Stackable Currency"
-	BaseType == "Arcanist's Etcher" "Neural Catalyst" "Armourer's Scrap" "Blacksmith's Whetstone" "Artificer's Orb" "Regal Shard" "Chance Shard" "Bronze Key"
+	BaseType == "Arcanist's Etcher" "Flesh Catalyst" "Skittering Catalyst" "Carapace Catalyst" "Uul-Netol's Catalyst" "Armourer's Scrap" "Blacksmith's Whetstone" "Artificer's Orb" "Regal Shard" "Chance Shard" "Bronze Key"
 	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -217,7 +217,7 @@ Show # $type->currency $tier->t4chaos
 	MinimapIcon 2 White Circle
 
 
-Show # %HS4 $type->currency $tier->t5alchemy
+Hide # %HS4 $type->currency $tier->t5alchemy
 	Class == "Stackable Currency"
 	BaseType == "Orb of Transmutation" "Orb of Augmentation" "Artificer's Shard" "Transmutation Shard"
 	SetFontSize 40
@@ -809,35 +809,35 @@ Show # $type->rarity->BaseType->OffHand->t1
 
 
 Show # $type->craft->gloves->t1
-	Rarity Normal Magic
+	Rarity Magic
 	BaseType == "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
 	AreaLevel >= 60
 	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
 
 Show # $type->craft->Boots->t1
-	Rarity Normal Magic
+	Rarity Magic
 	BaseType == "Expert Stone Greaves" "Expert Lizardscale Boots" "Expert Feathered Sandals" "Expert Stacked Sabatons" "Expert Pelt Leggings" "Expert Hunting Shoes"
 	AreaLevel >= 60
 	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
 
 Show # $type->craft->Body->t1
-	Rarity Normal Magic
+	Rarity Magic
 	BaseType == "Expert Vaal Cuirass" "Expert Serpentscale Coat" "Expert Altar Robe" "Expert Keth Raiment" "Expert Rogue Armour" "Expert Cloaked Mail" "Expert Scale Mail" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Scalper's Jacket" "Expert Wayfarer Jacket"
 	AreaLevel >= 60
 	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
 
 Show # $type->craft->Helm->t1
-	Rarity Normal Magic
+	Rarity Magic
 	BaseType == "Golden Wreath" "Golden Visage" "Expert Elite Greathelm" "Expert Hunter Hood" "Expert Feathered Tiara" "Expert Shielded Helm" "Expert Heavy Crown" "Expert Tribal Mask"
 	AreaLevel >= 60
 	SetFontSize 30
 	SetBackgroundColor 20 20 0 255
 
 Show # $type->craft->OffHand->t1
-	Rarity Normal Magic
+	Rarity Magic
 	BaseType == "Expert Plumed Focus" "Expert Stone Tower Shield" "Expert Feathered Targe" "Expert Omen Crest Shield" "Expert Edged Buckler"
 	AreaLevel >= 60
 	SetFontSize 30
