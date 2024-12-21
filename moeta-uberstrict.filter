@@ -1,4 +1,3 @@
-
 Show # $type->gold $tier->stack3
 	StackSize >= 1000
 	BaseType == "Gold"
@@ -300,14 +299,6 @@ Show # $type->currency->oil $tier->restex
 	MinimapIcon 0 Pink Circle
     
 
-# Special A Tier - League specific socketables and jewels
-Show 
-BaseType "Soul Core" "Timeless"
-SetTextColor 0 240 190
-SetBorderColor 0 240 190
-SetFontSize 40
-MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
 	
 # Special B Tier - Any Jewels
 Show
@@ -335,6 +326,40 @@ Show # $type->trial coins
 	PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle
+
+
+Show # $type->currency $tier->t1exalted
+	Class == "Socketable"
+	BaseType == "Soul Core of Zalatl" "Soul Core of Azcapa" "Mirror of Kalandra"
+	SetFontSize 40
+	SetTextColor 234 87 223 255
+	SetBorderColor 234 87 223 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+
+Show # $type->currency $tier->t3annul
+	Class == "Socketable"
+	BaseType == "Soul Core of Topotante" "Soul Core of Tacati" "Soul core of Opiloti" "Soul Core of Jiquani" "Soul Core of Citaqualotl" "Soul Core of Puhuarte" "Soul Core of Xopec" "Soul Core of Quipolatl" "Soul Core of Ticaba"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 234 87 223 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+Show # $type->currency $tier->t4chaos
+	Class == "Socketable"
+	BaseType == "Soul Core of Tzamoto" "Soul Core of Atmohua" "Soul Core of Cholotl" "Soul Core of Zantipi"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 200 101 242 255
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Circle
 
 
 Show # $type->socketable
@@ -412,6 +437,14 @@ Show # $type->currency->trial->omen $tier->t3
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle
 
+# Special A Tier - League specific socketables and jewels
+Show 
+BaseType "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
 
 #------------------------------------
 #   [4702] Life flasks
@@ -744,10 +777,10 @@ Show  # $type->rarity->Class
 #	Identified Tier
 #	MinimapIcon 2 Yellow Diamond
 
-
+#"Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer"  "Striking Spear" "Helix Spear" "Abyssal Flail" 
 Show  # $type->rarity->BaseType->Weapon
 	Rarity Rare
-	BaseType == "Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Striking Spear" "Helix Spear" "Abyssal Flail" "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Gothic Quarterstaff" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
+	BaseType == "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Gothic Quarterstaff" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
 	SetFontSize 40
 	SetBorderColor 255 125 0 185
 	PlayAlertSound 3 300
@@ -808,40 +841,40 @@ Show # $type->rarity->BaseType->OffHand->t1
 
 
 
-Show # $type->craft->gloves->t1
-	Rarity Magic
-	BaseType == "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
-	AreaLevel >= 60
-	SetFontSize 30
-	SetBackgroundColor 20 20 0 255
-
-Show # $type->craft->Boots->t1
-	Rarity Magic
-	BaseType == "Expert Stone Greaves" "Expert Lizardscale Boots" "Expert Feathered Sandals" "Expert Stacked Sabatons" "Expert Pelt Leggings" "Expert Hunting Shoes"
-	AreaLevel >= 60
-	SetFontSize 30
-	SetBackgroundColor 20 20 0 255
-
-Show # $type->craft->Body->t1
-	Rarity Magic
-	BaseType == "Expert Vaal Cuirass" "Expert Serpentscale Coat" "Expert Altar Robe" "Expert Keth Raiment" "Expert Rogue Armour" "Expert Cloaked Mail" "Expert Scale Mail" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Scalper's Jacket" "Expert Wayfarer Jacket"
-	AreaLevel >= 60
-	SetFontSize 30
-	SetBackgroundColor 20 20 0 255
-
-Show # $type->craft->Helm->t1
-	Rarity Magic
-	BaseType == "Golden Wreath" "Golden Visage" "Expert Elite Greathelm" "Expert Hunter Hood" "Expert Feathered Tiara" "Expert Shielded Helm" "Expert Heavy Crown" "Expert Tribal Mask"
-	AreaLevel >= 60
-	SetFontSize 30
-	SetBackgroundColor 20 20 0 255
-
-Show # $type->craft->OffHand->t1
-	Rarity Magic
-	BaseType == "Expert Plumed Focus" "Expert Stone Tower Shield" "Expert Feathered Targe" "Expert Omen Crest Shield" "Expert Edged Buckler"
-	AreaLevel >= 60
-	SetFontSize 30
-	SetBackgroundColor 20 20 0 255
+#Show # $type->craft->gloves->t1
+#	Rarity Magic
+#	BaseType == "Expert Spiral Wraps" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts"
+#	AreaLevel >= 60
+#	SetFontSize 30
+#	SetBackgroundColor 20 20 0 255
+#
+#Show # $type->craft->Boots->t1
+#	Rarity Magic
+#	BaseType == "Expert Stone Greaves" "Expert Lizardscale Boots" "Expert Feathered Sandals" "Expert Stacked Sabatons" "Expert Pelt Leggings" "Expert Hunting Shoes"
+#	AreaLevel >= 60
+#	SetFontSize 30
+#	SetBackgroundColor 20 20 0 255
+#
+#Show # $type->craft->Body->t1
+#	Rarity Magic
+#	BaseType == "Expert Vaal Cuirass" "Expert Serpentscale Coat" "Expert Altar Robe" "Expert Keth Raiment" "Expert Rogue Armour" "Expert Cloaked Mail" "Expert Scale Mail" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Scalper's Jacket" "Expert Wayfarer Jacket"
+#	AreaLevel >= 60
+#	SetFontSize 30
+#	SetBackgroundColor 20 20 0 255
+#
+#Show # $type->craft->Helm->t1
+#	Rarity Magic
+#	BaseType == "Golden Wreath" "Golden Visage" "Expert Elite Greathelm" "Expert Hunter Hood" "Expert Feathered Tiara" "Expert Shielded Helm" "Expert Heavy Crown" "Expert Tribal Mask"
+#	AreaLevel >= 60
+#	SetFontSize 30
+#	SetBackgroundColor 20 20 0 255
+#
+#Show # $type->craft->OffHand->t1
+#	Rarity Magic
+#	BaseType == "Expert Plumed Focus" "Expert Stone Tower Shield" "Expert Feathered Targe" "Expert Omen Crest Shield" "Expert Edged Buckler"
+#	AreaLevel >= 60
+#	SetFontSize 30
+#	SetBackgroundColor 20 20 0 255
 
 
 
