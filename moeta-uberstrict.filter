@@ -697,20 +697,20 @@ Show # %H5 $type->tablets
 
 
 
-Show # %D1 $type->craftable->selectedweapon
-	Mirrored False
-	Corrupted False
-	ItemLevel >= 60
-	Rarity Rare
-	SetFontSize 40
-	Class == "Crossbows"
-	BaseType == "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
-	PlayAlertSound 3 300
-	PlayEffect Yellow
-	MinimapIcon 1 Blue Star
-	SetTextColor 255 255 255 255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 20 110 220
+#Show # %D1 $type->craftable->selectedweapon
+#	Mirrored False
+#	Corrupted False
+#	ItemLevel >= 60
+#	Rarity Rare
+#	SetFontSize 40
+#	Class == "Crossbows"
+#	BaseType == "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
+#	PlayAlertSound 3 300
+#	PlayEffect Yellow
+#	MinimapIcon 1 Blue Star
+#	SetTextColor 255 255 255 255
+#	SetBorderColor 255 255 255 255
+#	SetBackgroundColor 20 110 220
 
 
 #Show # %D3 $type->sockets
@@ -777,10 +777,10 @@ Show  # $type->rarity->Class
 #	Identified Tier
 #	MinimapIcon 2 Yellow Diamond
 
-#"Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer"  "Striking Spear" "Helix Spear" "Abyssal Flail" 
+#"Expert Cultist Bow" "Talon Claw" "Cinquedea" "Dark Blade" "Dread Hatchet" "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer"  "Striking Spear" "Helix Spear" "Abyssal Flail" 
 Show  # $type->rarity->BaseType->Weapon
 	Rarity Rare
-	BaseType == "Expert Dualstring Bow" "Expert Warden Bow" "Expert Cultist Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Gothic Quarterstaff" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
+	BaseType == "Expert Dualstring Bow" "Expert Warden Bow" "Expert Zealot Bow" "Ultra Greatsword" "Vile Greataxe" "Expert Leaden Greathammer" "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Gothic Quarterstaff" "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Temple Maul" "Expert Tense Crossbow"
 	SetFontSize 40
 	SetBorderColor 255 125 0 185
 	PlayAlertSound 3 300
