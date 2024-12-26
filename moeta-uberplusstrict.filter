@@ -1,5 +1,5 @@
 Show # $type->gold $tier->stack3
-	StackSize >= 1000
+	StackSize >= 5000
 	BaseType == "Gold"
 	SetFontSize 40
 	SetTextColor 235 200 110 255
@@ -10,7 +10,7 @@ Show # $type->gold $tier->stack3
 	MinimapIcon 1 Yellow Cross
 
 Show # $type->gold $tier->stack2
-	StackSize >= 250
+	StackSize >= 1250
 	BaseType == "Gold"
 	SetFontSize 35
 	SetTextColor 255 255 255 255
@@ -20,7 +20,7 @@ Show # $type->gold $tier->stack2
 	MinimapIcon 1 White Cross
 
 Show # $type->gold $tier->stack1
-	StackSize >= 100
+	StackSize >= 500
 	BaseType == "Gold"
 	SetFontSize 35
 	SetTextColor 255 255 255 150
@@ -29,7 +29,7 @@ Show # $type->gold $tier->stack1
 	MinimapIcon 2 Grey Cross
 
 Show # $type->gold $tier->stacklvl1
-	StackSize >= 50
+	StackSize >= 250
 	BaseType == "Gold"
 	AreaLevel <= 68
 	SetFontSize 18
